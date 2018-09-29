@@ -1,0 +1,26 @@
+/* white hsl(21, 9%, 92%), 
+blue  rgb(21, 9,  92), hsl(249, 82%, 20%), 
+mooi grijs hsl(249, 30%, 20%);*/
+
+
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+    background-color: hsl(249, 30%, 20%);
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+

@@ -1,0 +1,71 @@
+/* white hsl(21, 9%, 92%), 
+blue  rgb(21, 9,  92), hsl(249, 82%, 20%), 
+mooi grijs hsl(249, 30%, 20%);*/
+
+
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto repeat(5, min-content);
+    background-color: hsl(249, 30%, 20%);
+    margin: 0;
+    padding: 0;
+    color: hsl(21, 9%, 92%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+canvas {
+    grid-column: 1;
+    grid-column-end: -1;
+    grid-row: 1;
+    grid-row-end: -1;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.controls, .move, .in_t, .input {
+    grid-column: 2;
+    grid-row: -2 ;
+    justify-self: right;
+    align-self: baseline;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.input {
+    grid-row: -5;
+}
+
+.in_t {
+    grid-row: -3 ;
+}
+
+.controls {
+    grid-row: -4;
+}
+
+button, #times, input {
+    background-color: hsla(21, 9%, 92%,0.3);
+    color: hsl(21, 9%, 92%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    margin: 2px;
+}
+
+input {
+    width: 50px;
+}
