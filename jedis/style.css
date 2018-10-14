@@ -15,7 +15,7 @@ body {
     padding: 0;
 }
 
-canvas {
+.p5Canvas {
     grid-column: 1;
     width: 100%;
     height: 100%;
