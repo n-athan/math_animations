@@ -60,7 +60,7 @@ function pos1(t) {
 
     //standing still
     let x = noise(100+xoff)*30 + cx * 0.7;
-	let y = noise(xoff1)*50 + sin(breath)*10 + cy - 50;
+	let y = noise(xoff1)*50 + sin(breath)*10 + cy + 50;
 	let x1 = x;
     let y1 = y + 250;
     
@@ -76,10 +76,15 @@ function pos2(t) {
     // let y1 = sin(t / 3) * 20 + cy + 200;
 
     //standing still
-    let x = noise(700+xoff)*-20 +cx * 1.3;
-	let y = noise(40 + xoff1)*30 + sin(PI+breath)*10 + cy - 50;
-	let x1 = x;
-    let y1 = y + 250;
+    // let x = noise(700+xoff)*-20 +cx * 1.3;
+	// let y = noise(40 + xoff1)*30 + sin(PI+breath)*10 + cy - 50;
+	// let x1 = x;
+    // let y1 = y + 250;
+
+	let x = noise(700+xoff)*-20 + cx * 1.3;
+	let y = noise(40 + xoff1)*30 + sin(PI+breath)*10 + cy;
+	let x1 = x + Math.sin(t) * Math.cos(t)*100
+	let y1 = y - Math.sin(t/Math.PI)*250;
     
 
 	return {x: x,y: y,x1: x1,y1: y1}

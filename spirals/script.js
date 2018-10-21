@@ -1,6 +1,6 @@
 var canvas = document.querySelector("canvas");
-var width = canvas.width = 500;
-var height = canvas.height = 500;
+var width = canvas.width = window.innerWidth;
+var height = canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
 
 //center
@@ -69,4 +69,37 @@ function starFadeInOut(a,theta_d,size,FadeIn,FadeOut) {
     }, size*FadeIn*3)
 }
 
-starFadeInOut(3,7,100,5,50);
+// starFadeInOut(3,7,100,5,50);
+
+function test1(t) {
+    let x = Math.sin(t) * Math.cos(t)*100 + cx;
+    let y = Math.sin(t/Math.PI)*100 + cy;
+
+    //figure8
+    // let x = Math.sin(t) * Math.cos(t)*50 + cx;
+    // let y = Math.sin(t)*50 + cy;
+
+    //boogje
+    // let x = -Math.sin(t)*50 + cx;
+    // let y = -Math.sin(t+Math.PI/2) * Math.cos(t)*50 + cy;
+
+    return{x:x,y:y}
+}
+
+function drawSpiralTest(p) {
+    var t = 0;
+    var hue = 0;
+    var l = 50;
+    for (var i = 0; i <= p; i++){
+        test = test1(t);
+        drawPoint(test.x,test.y,hue, l);
+        t += 0.1;
+        hue += 7;
+    }
+}
+
+drawSpiralTest(200); 
+
+
+
+
